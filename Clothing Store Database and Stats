@@ -1,0 +1,24 @@
+--Create a clothing store database
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, color TEXT, size TEXT, quantity INTEGER, price INTEGER);
+INSERT INTO clothing VALUES (1, "sweatshirt", "black", "M", 75, 50);
+INSERT INTO clothing VALUES (2, "t-shirt", "yellow", "XL", 100, 25);
+INSERT INTO clothing VALUES (3, "tank top", "white", "M", 80, 15);
+INSERT INTO clothing VALUES (4, "shorts", "blue", "L", 45, 40);
+INSERT INTO clothing VALUES (5, "skirt", "red", "S", 40, 45);
+INSERT INTO clothing VALUES (6, "leggings", "black", "S", 60, 55);
+INSERT INTO clothing VALUES (7, "jeans", "blue", "L", 35, 60);
+INSERT INTO clothing VALUES (8, "sweatpants", "gray", "M", 70, 45);
+INSERT INTO clothing VALUES (9, "jacket", "black", "XL", 50, 50);
+INSERT INTO clothing VALUES (10, "dress", "pink", "S", 35, 55);
+INSERT INTO clothing VALUES (11, "sports bra", "orange", "M", 30, 35);
+INSERT INTO clothing VALUES (12, "turtleneck shirt", "tan", "L", 25, 30);
+INSERT INTO clothing VALUES (13, "cardigan", "gray", "M", 35, 35);
+INSERT INTO clothing VALUES (14, "blazer", "black", "L", 25, 65);
+INSERT INTO clothing VALUES (15, "trousers", "tan", "M", 30, 45);
+
+--display the database ordered by price.
+SELECT * FROM clothing ORDER BY price;
+
+--what is the total quantity of items that are size M?
+SELECT SUM(quantity) FROM clothing where size = "M";
